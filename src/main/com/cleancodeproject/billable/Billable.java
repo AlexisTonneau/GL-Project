@@ -5,5 +5,4 @@ public interface Billable {
     double getInclTaxPrice();
     double getTotalTaxes();
     String getName();
-
 }
