@@ -39,10 +39,12 @@ public class BillDisplayTest {
     @Test
     public void testDisplayBill() {
         String expectedOutputBill =
-                "2 Jordan One Low: 190\n" +
-                "1 Pfizer Vaccine: 200\n" +
-                "Montant des taxes : 30\n" +
-                "Total : 610\n";
+                """
+                        2 Jordan One Low: 190
+                        1 Pfizer Vaccine: 200
+                        Montant des taxes : 30
+                        Total : 610
+                        """;
         bill.addElement(Product.builder().name("Jordan One Low").exclTaxPrice(190).type(ProductType.OTHER).isImported(false).build(), 2);
         bill.addElement(Product.builder().name("Pfizer Vaccine").exclTaxPrice(200).type(ProductType.DRUGS).isImported(true).build(), 1);
         BillDisplay.displayBill(bill);
